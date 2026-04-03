@@ -1,5 +1,5 @@
-#ifndef __TER_CS
-#define __TER_CS
+#ifndef __TER_CS_H
+#define __TER_CS_H
 
 #include <stdint.h>
 

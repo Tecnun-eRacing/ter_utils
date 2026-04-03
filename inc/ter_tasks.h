@@ -1,5 +1,5 @@
-#ifndef __TER_TASKS
-#define __TER_TASKS
+#ifndef __TER_TASKS_H
+#define __TER_TASKS_H
 
 #define TER_TASK_BUFFER_LEN 5
 
