@@ -1,7 +1,7 @@
 #ifndef __TER_TASKS_H
 #define __TER_TASKS_H
 
-#define TER_TASK_BUFFER_LEN 5
+#define TER_TASK_BUFFER_LEN 16
 
 // Permite añadir tareas a una cola para que se ejecuten de forma bloqueante
 // en el main tiene que aparecer loop_taks() dentro del user code begin while (en el bucle)
