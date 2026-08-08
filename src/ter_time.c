@@ -15,7 +15,12 @@ uint32_t CURRENT_TARGET_TICK = -1;
 void ter_time_update_current_target_tick(uint32_t new_target_tick) {
     CSState cs_state = enter_cs();
     CURRENT_TARGET_TICK = new_target_tick;
-    HTIM->Instance->CNT = (new_target_tick - HAL_GetTick()) * HTIM_KHZ;
+    uint32_t now = HAL_GetTick();
+    if (new_target_tick > now) {
+        HTIM->Instance->CNT = (new_target_tick - now) * HTIM_KHZ;
+    } else {
+        HTIM->Instance->CNT = 0;
+    }
     exit_cs(cs_state);
 }
 
